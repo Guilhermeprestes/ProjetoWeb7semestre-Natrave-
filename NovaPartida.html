@@ -23,48 +23,31 @@
 
   <body>
 
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">
+         <span class="img-logo">Na Trave</span>
+      </a>
 
-    <nav class="navbar navbar-fixed-top navbar-inverse navbar-transparente">
-      <div class="container">
-
-        <!-- header -->
-        <div class="navbar-header" >
-
-          <!--botao toggle-->
-          <button type="button" class="navbar-toggle collapsed"
-                  data-toggle="collapse" data-target="#barra-navegacao">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-
-
-          <a href="index.html" class="navbar-brand">
-            
-            <span class="img-logo">Na Trave</span>
-          </a>
-          
-        </div>
-
-        <!-- Navbar -->
-
-        <div class="collapse navbar-collapse" id="barra-navegacao">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#partida">Partidas</a></li>
-            <li><a href="construcao.html">Sobre</a></li>
-            <li><a href="construcao.html">Quem Somos</a></li>
-          
-           
-          </ul>
-        </div>
-
-
-      </div> <!-- /container -->
-
-
-</nav> <!-- /nav -->
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#partida">PARTIDAS</a></li>
+            <li><a href="construcao.html">SOBRE</a></li>
+            <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
+            <li class="divisor" role="separator"></li>
+            <li><a href="NovaPartida.html">NOVA PARTIDA</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <!-- =================== Nova Partida ==================== -->
 
@@ -73,107 +56,90 @@
       <div class="page-header">
         <h1>Cadastrar Nova Partida</h1>
       </div>
-
-      <div class="row">
-        <div class="col-sm-8">
-          <h3>Cadastrar partida</h3>
-      <form>
-
-        <div class="form-group">
-          <label>Nome da partida</label>
-          <input type="text" class="form-control" id="nome-partida">
-        </div>
-        <div class="form-group">
-          <label>Descrição da partida</label>
-          <input type="text" class="form-control" id="descricao">
-        </div>
-
-        <div class="form-group">
-          <label for="exampleInputFile">Imagem de capa</label>
-          <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-          <small id="fileHelp" class="form-text text-muted">selecione uma imagem de 60x60 para por de capa na sua partida</small>
-        </div>
-
-      <br>
-      <h4>Endereço</h4>
-      <br>
-
-        <div class="row">
-            <div class="col-sm-6"> <!-- coluna direita -->
-
-              <div class="form-group">
-                <label>Rua</label>
-                <input type="text" class="form-control" id="nome-partida">
-              </div>
-
-              <div class="form-group">
-                <label>Cidade</label>
-                <input type="text" class="form-control" id="nome-partida">
-              </div>
-
-            
-            </div><!-- /coluna direita -->
-
-            <div class="col-sm-6"> <!-- coluna esquerda -->
-
-            <div class="form-group">
-                <label>Bairro</label>
-                <input type="text" class="form-control" id="nome-partida">
-              </div>
-
-              <div class="form-group">
-                <label>Estado</label>
-                <input type="text" class="form-control" id="nome-partida">
-              </div>
-             
-            </div><!-- /coluna esquerda -->
-        </div>
-      </form>
-
-          
-
-
-            
-  
-
-            <div class="checkbox">
-              <label>
-                <input type="checkbox"> Aceito os termos do serviço.
-              </label>
-            </div>
-
-          
-          
-
-          </form>
-
-             <button type="submit" class="btn btn-default">Cadastrar</button>
-
-        </div>
-
-        <div class="col-sm-4">
-
-          <h3>Cadastre-se</h3>
+    <div class="row">
+      <div class="col-sm-8">        
+        <form>
+    <h3>Informações da partida</h3>
 
           <div class="form-group">
-          <label>Nome</label>
-          <input type="text" class="form-control" id="nome">
-        </div>
-        <div class="form-group">
-              <label for="email">E-mail</label>
-              <input type="email" class="form-control" id="email">
-            </div>
-
-        
+            <label>Nome da partida</label>
+            <input type="text" class="form-control" id="nome-partida">
+          </div>         
           
-        </div>
+          <div class="form-group">
+            <label>Descrição da partida</label>
+            <textarea class="form-control"  id="descricao"></textarea>
+          </div>
 
-      
+    <h3>Endereço da Partida</h3>
 
+          <div class="form-group">
+            <label>Rua</label>
+            <input type="text" class="form-control" id="rua">
+          </div>         
+
+          <div class="form-group">
+            <label>Bairro</label>
+            <input type="text" class="form-control" id="bairro">
+          </div>
+
+          <div class="form-group">
+            <label>Cidade</label>
+            <input type="text" class="form-control" id="cidade">
+          </div>
+
+          <div class="form-group">
+            <label>Estado</label>
+            <input type="text" class="form-control" id="estado">
+          </div>
+
+    <h3>Seus Dados</h3>
+
+          <div class="form-group">
+            <label>Nome</label>
+            <input type="text" class="form-control" id="nome">
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label>Telefone/Celular</label>
+            <input type="text" class="form-control" id="telefone">
+          </div>
+
+        </form>
+
+        <button type="submit" class="btn btn-success">Cadastrar</button>
+        <a href="index.html" class="btn btn-danger" role="button">Cancelar</a>
+
+      </div>      
+    </div><!-- /row -->
+  </div> <!-- /container -->
+  <br><br><br><br><br>
+
+<!-- =================== /Nova Partida ==================== --> 
+
+<!-- =================== footer  ==================== -->
+
+<footer id="rodape">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-md-1">
+            <span class="img-logo">Na trave</span>
+          </div>         
+
+          
+            <div class="col-md-11">
+                 <h4>© 2018: Todos os direitos reservados</h4>
+            </div>          
+        </div><!-- /row -->
       </div>
+    </footer> <!--Footer-->    
 
-    </div> 
 
+<!-- =================== /footer  ==================== -->
 
 <!-- =================== scripts ==================== -->
 
@@ -184,3 +150,12 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
+
+<!-- 
+*
+*
+* @author Guilherme Ola Prestes
+* @version 0.1
+*
+*
+ -->

@@ -24,52 +24,35 @@
   <body>
 
 
-    <nav class="navbar navbar-fixed-top navbar-inverse navbar-transparente">
-      <div class="container">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar iconi"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">
+         <span class="img-logo">Na Trave</span>
+      </a>
 
-        <!-- header -->
-        <div class="navbar-header" >
-
-          <!--botao toggle-->
-          <button type="button" class="navbar-toggle collapsed"
-                  data-toggle="collapse" data-target="#barra-navegacao">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-
-
-          <a href="index.html" class="navbar-brand">
-            
-            <span class="img-logo">Na Trave</span>
-          </a>
-          
-        </div>
-
-        <!-- Navbar -->
-
-        <div class="collapse navbar-collapse" id="barra-navegacao">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#partida">Partidas</a></li>
-            <li><a href="construcao.html">Sobre</a></li>
-            <li><a href="construcao.html">Quem Somos</a></li>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#partida">PARTIDAS</a></li>
+            <li><a href="construcao.html">SOBRE</a></li>
+            <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
             <li class="divisor" role="separator"></li>
-            <li><a href="NovaPartida.html">Nova Partida</a></li>
-           
-          </ul>
-        </div>
-
-
-      </div> <!-- /container -->
-
-
-</nav> <!-- /nav -->
+            <li><a href="NovaPartida.html">NOVA PARTIDA</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <!-- =================== carrossel ==================== -->
 
-<div  id="myCarousel" class="carousel slide" data-ride="carousel">
+<div  id="myCarousel" class="carousel slide MeuCarousel" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -81,6 +64,10 @@
   <div class="carousel-inner">
     <div class="item active">
       <img src="img/img1.jpg" >
+      <div class="carousel-caption">
+        <h3>Los Angeles</h3>
+        <p>LA is always so much fun!</p>
+      </div>
     </div>
 
     <div class="item">
@@ -123,56 +110,7 @@
       </div>
     </div>
   </div>
-   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="img/thumb.jpg" alt="...">
-      <div class="caption">
-        <h3>FUTEBOL ENTRE AMIGOS</h3>
-        <p>futebolzinho no final de semana</p>
-        <p><a href="#" class="btn btn-primary" role="button"> ver patida </a></p>
-      </div>
-    </div>
-  </div>
-   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="img/thumb.jpg" alt="...">
-      <div class="caption">
-        <h3>FUTEBOL ENTRE AMIGOS</h3>
-        <p>futebolzinho no final de semana</p>
-        <p><a href="#" class="btn btn-primary" role="button"> ver patida </a></p>
-      </div>
-    </div>
-  </div>
-   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="img/thumb.jpg" alt="...">
-      <div class="caption">
-        <h3>FUTEBOL ENTRE AMIGOS</h3>
-        <p>futebolzinho no final de semana</p>
-        <p><a href="#" class="btn btn-primary" role="button"> ver patida </a></p>
-      </div>
-    </div>
-  </div>
-   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="img/thumb.jpg" alt="...">
-      <div class="caption">
-        <h3>FUTEBOL ENTRE AMIGOS</h3>
-        <p>futebolzinho no final de semana</p>
-        <p><a href="#" class="btn btn-primary" role="button"> ver patida </a></p>
-      </div>
-    </div>
-  </div>
-   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="img/thumb.jpg" alt="...">
-      <div class="caption">
-        <h3>FUTEBOL ENTRE AMIGOS</h3>
-        <p>futebolzinho no final de semana</p>
-        <p><a href="#" class="btn btn-primary" role="button"> ver patida </a></p>
-      </div>
-    </div>
-  </div>
+   
   
 
 
@@ -189,21 +127,17 @@
       <div class="container">
         <div class="row">
           
-          <div class="col-md-6">
+          <div class="col-md-1">
             <span class="img-logo">Na trave</span>
           </div>         
 
-          <div class="col-md-6">
-            <h4>Todos os direitos reservados</h4>           
-          </div>
-
-
-
+          
+            <div class="col-md-11">
+                 <h4>© 2018: Todos os direitos reservados</h4>
+            </div>          
         </div><!-- /row -->
       </div>
-    </footer>
-
-
+    </footer> <!--Footer-->               
 
 <!-- =================== /footer  ==================== -->
 
@@ -217,3 +151,12 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
+
+<!-- 
+*
+*
+* @author Guilherme Ola Prestes
+* @version 0.1
+*
+*
+ -->

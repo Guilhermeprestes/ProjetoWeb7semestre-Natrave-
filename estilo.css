@@ -7,13 +7,14 @@
 /* ========== Layout ==========*/
 
 body{
-  padding-top: 60px;
+  padding-top: 45px;
+  font-family: "Product sans", Verdana, sans-serif;
 }
 
 /* -- Barra de navegação -- */
 
 .img-logo{
-	height: 30px;
+	height: 100%;
 	width: 200px;
 	display: block;
 	background: url('img/logo.png') no-repeat;
@@ -21,14 +22,30 @@ body{
 	color: transparent;
 }
 
-nav.navbar-transparente{
-	padding: 10px 0;
-	background: linear-gradient(#21610B,#088A29) ;
-	border: none;
+.navbar {
+    margin-bottom: 0;
+    background: linear-gradient(#21610B,#088A29);
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    font-weight: bold;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
 }
 
-.navbar-brand{
-	padding: 10px 15px;
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #088A29 !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
 }
 
 .divisor{
@@ -38,23 +55,30 @@ nav.navbar-transparente{
 	margin: 16px 10px;
 }
 
-.navbar-inverse .navbar-nav>li>a{
-	color: white;
-}	
-.navbar-inverse .navbar-nav>li>a:hover{
-	color: #FF8C00;
-}	
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
 
 /* ========== Rodapé ==========*/
 footer {
 	background: #000;
-	padding: 50px 0px 20px 0px;
+	padding: 20px 0px 20px 0px;
 	position: relative;
+	display: block;
 }
 
 /* ========== Tipografia ==========*/
 #rodape h4{
-	color: #919496;
+	color: white;
 	font-size: 12px;
-	text-transform: uppercase;
+	text-align: center;
 }
