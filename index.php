@@ -39,12 +39,13 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">HOME</a></li>
+            <li><a href="index.php">HOME</a></li>
             <li><a href="#partida">PARTIDAS</a></li>
             <li><a href="construcao.html">SOBRE</a></li>
             <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
             <li class="divisor" role="separator"></li>
-            <li><a href="NovaPartida.html">NOVA PARTIDA</a></li>
+            <li><a href="NovaPartida.php">NOVA PARTIDA</a></li>
+            <li><a href="teste.php">Teste</a></li
       </ul>
     </div>
   </div>
@@ -64,10 +65,6 @@
   <div class="carousel-inner">
     <div class="item active">
       <img src="img/img1.jpg" >
-      <div class="carousel-caption">
-        <h3>Los Angeles</h3>
-        <p>LA is always so much fun!</p>
-      </div>
     </div>
 
     <div class="item">
@@ -92,14 +89,36 @@
 
 <!-- =================== /carrossel ==================== -->
 
+
 <!-- =================== album de partidas  ==================== -->
 <div id="partida" class="container">
 
   <br>
   <h1>Partidas</h1>
   <br>
+
+
+
+   <?php
+    include ('conexao.php');
+
+      // executa a consulta
+  $sql = "SELECT * FROM partidatb ORDER BY nome";
+  $res = mysqli_query($mysqli, $sql);
+
+  // conta o número de registros
+  $total = mysqli_num_rows($res);
+  echo "<p>Total de Resultados: " . $total . "</p>";
+
+  // loop pelos registros
+  while ($f = mysqli_fetch_array($res))
+  {
+    echo "<p>" . $f['nome'] . " | " . $f['email'] . " | " .  $f['nome_partida'] . " | " . date('d/m/Y', strtotime($f['data'])) . "</p>";
+  }
+ 
+  ?>
   
-  <div class="row">
+  <!-- <div class="row">
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
       <img src="img/thumb.jpg" alt="...">
@@ -109,8 +128,8 @@
         <p><a href="#" class="btn btn-primary" role="button"> ver patida </a></p>
       </div>
     </div>
-  </div>
-   
+  </div> -->
+
   
 
 
@@ -118,8 +137,6 @@
 </div> <!-- /container -->
 
 <!-- =================== /album de partidas  ==================== -->
-
-
 
 <!-- =================== footer  ==================== -->
 

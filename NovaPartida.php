@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -43,7 +44,7 @@
             <li><a href="construcao.html">SOBRE</a></li>
             <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
             <li class="divisor" role="separator"></li>
-            <li><a href="NovaPartida.html">NOVA PARTIDA</a></li>
+            <li><a href="NovaPartida.php">NOVA PARTIDA</a></li>
       </ul>
     </div>
   </div>
@@ -58,60 +59,68 @@
       </div>
     <div class="row">
       <div class="col-sm-8">        
-        <form>
+        <form name="partidanatrave" action="cadastro.php" method="post">
     <h3>Informações da partida</h3>
 
           <div class="form-group">
             <label>Nome da partida</label>
-            <input type="text" class="form-control" id="nome-partida">
+            <input type="text" name="nome_partida" class="form-control" id="nome_partida">
           </div>         
           
           <div class="form-group">
             <label>Descrição da partida</label>
-            <textarea class="form-control"  id="descricao"></textarea>
-          </div>
+            <input type="text" name="descricao_partida" class="form-control" id="descricao_partida">
+          </div>  
+
+          <div class="form-group row">
+            <label>Data</label>
+            <input class="form-control" type="date" name="data" value="yyyy-mm-dd" id="data">
+          </div>     
 
     <h3>Endereço da Partida</h3>
 
           <div class="form-group">
             <label>Rua</label>
-            <input type="text" class="form-control" id="rua">
+            <input type="text" name="rua" class="form-control" id="rua">
           </div>         
 
           <div class="form-group">
             <label>Bairro</label>
-            <input type="text" class="form-control" id="bairro">
+            <input type="text" name="bairro" class="form-control" id="bairro">
           </div>
 
           <div class="form-group">
             <label>Cidade</label>
-            <input type="text" class="form-control" id="cidade">
+            <input type="text" name="cidade" class="form-control" id="cidade">
           </div>
 
           <div class="form-group">
             <label>Estado</label>
-            <input type="text" class="form-control" id="estado">
+            <input type="text" name="estado" class="form-control" id="estado">
           </div>
 
     <h3>Seus Dados</h3>
 
           <div class="form-group">
             <label>Nome</label>
-            <input type="text" class="form-control" id="nome">
+            <input type="text" name="nome" class="form-control" id="nome">
           </div>
           <div class="form-group">
             <label for="email">E-mail</label>
-            <input type="email" class="form-control" id="email">
+            <input type="email" name="email" class="form-control" id="email">
           </div>
           <div class="form-group">
             <label>Telefone/Celular</label>
-            <input type="text" class="form-control" id="telefone">
+            <input type="text" name="telefone" class="form-control" id="telefone">
           </div>
+
+
+          <button type="submit" id="botao" class="btn btn-success" value="Cadastrar">Cadastrar</button>
+          <a href="index.html" class="btn btn-danger" role="button">Cancelar</a>
 
         </form>
 
-        <button type="submit" class="btn btn-success">Cadastrar</button>
-        <a href="index.html" class="btn btn-danger" role="button">Cancelar</a>
+       
 
       </div>      
     </div><!-- /row -->
