@@ -2,6 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -32,7 +33,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.php">
          <span class="img-logo">Na Trave</span>
       </a>
 
@@ -41,11 +42,9 @@
       <ul class="nav navbar-nav navbar-right">
             <li><a href="index.php">HOME</a></li>
             <li><a href="#partida">PARTIDAS</a></li>
-            <li><a href="construcao.html">SOBRE</a></li>
-            <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
+            <li><a href="QuemSomos.php">QUEM SOMOS</a></li>
             <li class="divisor" role="separator"></li>
             <li><a href="NovaPartida.php">NOVA PARTIDA</a></li>
-            <li><a href="teste.php">Teste</a></li
       </ul>
     </div>
   </div>
@@ -91,7 +90,7 @@
 
 
 <!-- =================== album de partidas  ==================== -->
-<div id="partida" class="container">
+<div id="partida" class="container list-group">
 
   <br>
   <h1>Partidas</h1>
@@ -103,41 +102,49 @@
     include ('conexao.php');
 
       // executa a consulta
-  $sql = "SELECT * FROM partidatb ORDER BY nome";
+  $sql = "SELECT * FROM partidatb ORDER BY data ";
   $res = mysqli_query($mysqli, $sql);
 
   // conta o número de registros
   $total = mysqli_num_rows($res);
-  echo "<p>Total de Resultados: " . $total . "</p>";
+  echo "<p>Total de Partidas encontradas: " . $total . "</p>";
+// loop pelos registros
+  
+  if ($res) {
 
-  // loop pelos registros
-  while ($f = mysqli_fetch_array($res))
-  {
-    echo "<p>" . $f['nome'] . " | " . $f['email'] . " | " .  $f['nome_partida'] . " | " . date('d/m/Y', strtotime($f['data'])) . "</p>";
-  }
- 
+    while ($reg = mysqli_fetch_array($res)){
+      echo "<a href='#' class='list-group-item'>";
+
+      echo "<h1 class='list-group-item-heading'>".$reg['nome_partida'].'</h1>'.'<h4>('.$reg['descricao_partida'].')</h4>';
+      echo "<h4> ENDEREÇO:Rua".$reg['rua'].','.$reg['bairro'].','.$reg['cidade'].'-'.$reg['estado']."</h4>";
+      echo "<h4>".'DATA:'.$reg['data']."</h4>";
+      echo "<h2>Contato:</h2>";
+      echo "<h4>".'NOME:'.$reg['nome']."</h4>";
+      echo "<h4>".'EMAIL:'.$reg['email']."</h4>";
+      echo "<h4>".'CELULAR/TELEFONE:'.$reg['telefone']."</h4>";
+
+
+
+      echo "</a>";
+    }
+
+  } else {
+
+    echo 'erro no banco de dados';
+
+  } 
+
+
   ?>
   
-  <!-- <div class="row">
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="img/thumb.jpg" alt="...">
-      <div class="caption">
-        <h3>FUTEBOL ENTRE AMIGOS</h3>
-        <p>futebolzinho no final de semana</p>
-        <p><a href="#" class="btn btn-primary" role="button"> ver patida </a></p>
-      </div>
-    </div>
-  </div> -->
+  
 
   
 
 
 </div><!-- /row -->
-</div> <!-- /container -->
 
 <!-- =================== /album de partidas  ==================== -->
-
 <!-- =================== footer  ==================== -->
 
 <footer id="rodape">
@@ -173,7 +180,7 @@
 *
 *
 * @author Guilherme Ola Prestes
-* @version 0.1
+* @version 0.5
 *
 *
  -->

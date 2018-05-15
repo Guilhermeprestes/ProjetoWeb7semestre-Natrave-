@@ -32,17 +32,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.php">
          <span class="img-logo">Na Trave</span>
       </a>
 
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="#partida">PARTIDAS</a></li>
-            <li><a href="construcao.html">SOBRE</a></li>
-            <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
+            <li><a href="index.php">HOME</a></li>
+            <li><a href="QuemSomos.php">QUEM SOMOS</a></li>
             <li class="divisor" role="separator"></li>
             <li><a href="NovaPartida.php">NOVA PARTIDA</a></li>
       </ul>
@@ -116,7 +114,7 @@
 
 
           <button type="submit" id="botao" class="btn btn-success" value="Cadastrar">Cadastrar</button>
-          <a href="index.html" class="btn btn-danger" role="button">Cancelar</a>
+          <a href="index.php" class="btn btn-danger" role="button">Cancelar</a>
 
         </form>
 
@@ -164,7 +162,7 @@
 *
 *
 * @author Guilherme Ola Prestes
-* @version 0.1
+* @version 0.5
 *
 *
  -->
